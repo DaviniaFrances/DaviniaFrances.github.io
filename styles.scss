@@ -1,0 +1,23 @@
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/variables-dark";
+
+$custom-colors: (
+	"color-propio-azul": #97d4e7,
+	"color-propio-amarillo": #d37e21,
+	"color-propio-azul-oscuro": #365fa1,
+	"color-propio-amarillo-claro":#ffd46a
+);
+
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$espacios: (
+	"espacio-propio-1": $spacer * 8,
+	"espacio-propio-2": $spacer * 6,
+	"espacio-propio-3": $spacer * -2
+);
+$spacers: map-merge($spacers, $espacios);
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss"
